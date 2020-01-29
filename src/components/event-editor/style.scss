@@ -1,0 +1,58 @@
+@import '../../variables.scss';
+
+.cd-event-editor {
+  width: 100%;
+  margin: 0px auto;
+
+  @media #{$sm-screen} {
+    width: 588px;
+  }
+
+  .cd-error {
+    padding: 8px 0px;
+    text-align: center;
+    color: $editor-error-text-color;
+  }
+
+  .cd-form-element {
+    padding: 8px 0px;
+  }
+
+  .cd-input {
+    display: block;
+    width: 100%;
+    padding: 4px;
+    font-size: 16px;
+    background-color: transparent;
+    color: $text-color;
+    border: none;
+    border-bottom: 2px solid $text-color;
+    transition-property: background-color;
+    transition-duration: 0.1s;
+
+    &:hover {
+      background-color: $editor-button-background-hover-color;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  .cd-button {
+    display: block;
+    width: 100%;
+    padding: 4px;
+    font-size: 16px;
+    background-color: transparent;
+    color: $text-color;
+    border: 2px solid $text-color;
+    transition-property: background-color;
+    transition-duration: 0.1s;
+
+    &:hover {
+      background-color: $editor-button-background-hover-color;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+@import '../../variables.scss';
+
+.cd-event-view {
+  width: 100%;
+  margin: 0px auto;
+
+  @media #{$sm-screen} {
+    width: 588px;
+  }
+
+  .cd-event-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 64px;
+    padding: 8px 0px;
+
+    @media #{$sm-screen} {
+      grid-template-columns: 260px auto 64px;
+    }
+  }
+}

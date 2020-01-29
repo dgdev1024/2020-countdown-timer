@@ -1,0 +1,39 @@
+@import '../../variables.scss';
+
+.cd-event-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr 64px;
+  padding: 8px 0px;
+  border-top: 1px solid $event-border-color;
+  transition-property: background-color;
+  transition-duration: 0.1s;
+
+  @media #{$sm-screen} {
+    grid-template-columns: 260px auto 64px;
+  }
+
+  .cd-event-time-until {
+    font-family: 'Source Code Pro', monospace;
+  }
+
+  .cd-remove-button {
+    background-color: transparent;
+    color: $editor-error-text-color;
+    border: none;
+    transition-property: background-color;
+    transition-duration: 0.1s;
+
+    &:hover {
+      background-color: $editor-button-background-hover-color;
+      cursor: pointer;
+    }
+  }
+
+  &.cd-time-up {
+    background-color: $event-time-up-background-color;
+
+    .cd-remove-button:hover {
+      background-color: $event-time-up-background-color;
+    }
+  }
+}
